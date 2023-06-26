@@ -1,0 +1,67 @@
+
+<div *ngIf="!shownLogin" id="maindiv" style="border-radius:20px;" class="container w-50 p-4 mt-5">
+    <h1 class="text-center">Seller authentication</h1>
+    <form  (ngSubmit)="addseller()" [formGroup]="addSellerForm" class="common-form" action="" >
+
+        <div class="mt-2 p-2">
+            <input formControlName="name" class="mt-2 form-control p-2" type="text" id="unamid" name="usern1" placeholder="Enter username">
+        </div>
+        <div>
+            <p class="text-danger text-center"></p>
+        </div>
+        <div class="mt-2 p-2">
+            <input formControlName="email" class="mt-2 form-control" type="email" id="email" name="emailid" placeholder="enter email">
+        </div>
+        <div>
+            <p class="text-danger text-center"></p>
+        </div>
+
+        <div class="mt-2 p-2">
+            <input formControlName="password" class="mt-2 form-control"  type="password" id="acid" name="password" placeholder="Enter password"><br>
+        </div>
+        <div>
+            <p class="text-danger text-center"></p>
+        </div>
+        <div class="mt-5 p-2 text-center">
+            <button  type="submit" class="btn btn-outline-dark ">register</button>
+        </div>
+        <div class="mt-3  p-2 text-center">
+            <a class="auth-toggle-link" (click)="openLogin()">
+                Already have an account?  click to login
+            </a>
+        </div>
+    </form>
+
+</div>
+
+
+<div *ngIf="shownLogin" id="maindiv" style="border-radius:20px;" class="container w-50 p-4 mt-5">
+    <h1 class="text-center">Seller Login </h1>
+    <p style="color: red;">{{authError}}</p>
+    <form  (ngSubmit)="Login()" [formGroup]="addLoginForm" class="common-form" action="" >
+
+        <div class="mt-2 p-2">
+            <input formControlName="email" class="mt-2 form-control" type="email" id="email" name="emailid" placeholder="Enter email">
+        </div>
+        <div>
+            <p class="text-danger text-center"></p>
+        </div>
+
+        <div class="mt-2 p-2">
+            <input formControlName="password" class="mt-2 form-control" type="password" id="acid" name="password" placeholder="Enter password"><br>
+        </div>
+        <div>
+            <p class="text-danger text-center"></p>
+        </div>
+        <div class="mt-5 p-2 text-center">
+            <button  type="submit" class="btn btn-outline-dark ">register</button>
+        </div>
+        <div class="mt-3  p-2 text-center">
+            <a class="auth-toggle-link" (click)="openSignup()">
+                Dont have an account?  click to login
+            </a>
+        </div>
+    </form>
+
+</div>
+

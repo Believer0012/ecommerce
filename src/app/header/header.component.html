@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand px-4 px-lg-5 " href=""><h2>J$L</h2></a>
+    <div *ngIf="menuType=='default'" class="container px-4 px-lg-5">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      </div>
+      <div [ngSwitch]="menuType" class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul *ngSwitchCase="'Default'" class="navbar-nav me-auto px-4 px-lg-5  mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active  px-lg-5" aria-current="page" href="">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-5" href="seller-auth">Seller</a></li>
+                <li class="nav-item"><a class="nav-link  px-lg-5" href="seller-user-login">Login/sign-up</a></li>
+                 <button class="btn btn-outline-dark" type="submit">
+                    <i class="bi-cart-fill me-"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">{{cartItems}}</span>
+                </button>
+            </ul>
+            <ul *ngSwitchCase="'user'" class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active px-4 px-lg-5" routerLink="seller-auth">Seller</a></li>
+                <li class="nav-item"><a class="nav-link active px-4 px-lg-5" routerLink="user-home">Home</a></li>
+                <li class="nav-item"><a class="nav-link active px-4 px-lg-5">{{userName | titlecase}}</a></li>
+                <li class="nav-item"><a class="nav-link active px-4 px-lg-5" routerLink="" >My Orders</a></li>
+                <li class="nav-item"><a class="nav-link active px-4 px-lg-5" (click)="userLogout()" >Logout</a></li>
+                <button class="btn btn-outline-dark" type="submit">
+                    <i class="bi-cart-fill me-"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">{{cartItems}}</span>
+                </button>
+            </ul>
+            <ul *ngSwitchCase="'seller'" class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active px-4 px-lg-5" aria-current="page" href="seller-add-productList">Product list</a></li>
+                <li class="nav-item"><a class="nav-link px-4 px-lg-5" href="seller-add-product">Add product</a></li>
+                <li class="nav-item"><a (click)="logout()" class="nav-link px-4 px-lg-5">Logout</a></li>
+                
+                <button class="btn btn-outline-dark" type="submit">
+                    <i class="bi-cart-fill me-"></i>
+                    {{sellerName | titlecase }}
+                   
+                </button>
+            </ul>
+            
+            <form class="d-flex">
+               
+                <form class="d-flex me-5" role="search">
+                    <input [(ngModel)]="searchTerm" (keyup)="search($event)" id="searchbar" class="form-controL me-2" type="search" placeholder="Search Product" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+        
+        
+            </form>
+        </div>
+
+</nav>
+

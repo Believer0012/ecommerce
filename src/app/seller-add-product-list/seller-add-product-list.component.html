@@ -1,0 +1,45 @@
+
+<div class="container">
+        
+    <div  class="container row text-center">   
+           <div class="p-2 col-1 "><button (click)="filter('')" type="button" class="btn btn-light"><u>View all</u></button></div>
+           <div class="p-2 col-1"><button (click)="filter('2')" type="button" class="btn btn-light"><u>Men</u></button></div>
+            
+            
+           <div class="p-2  col-1"><button (click)="filter('3')" type="button" class="btn btn-light"><u>Women</u></button></div>
+           
+           <div class="p-2 col-1 "><button (click)="filter('1')" type="button" class="btn btn-light"><u>Footwear</u></button></div>
+     
+        
+
+    </div>   
+ </div>  
+
+<!-- Section-->
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div id="d1" *ngFor=" let i of filterProduts | filter:searchKey:'productName'" class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img style="height: 300px;" class="card-img-top" src="{{i.productImage}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{i.productName}}</h5>
+                            <!-- Product price-->
+                            {{i.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                href="seller-view-product/{{i.id}}">View options</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,140 @@
+{
+  "seller": [
+    {
+      "name": "joel jonahs joy",
+      "email": "joeljonahsz@gmail.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "murali",
+      "email": "murali@gmail.com",
+      "password": "murali@123",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productName": "J$L casual linen shirt",
+      "categoryId": "2",
+      "description": "Latest men brown Linen shirt",
+      "price": "2500",
+      "isAvailiable": "true",
+      "productImage": "https://i.postimg.cc/V61rLYQc/hmgoepprod-7.jpg",
+      "rating": "4.3",
+      "review": "150",
+      "vendorName": "Jack GoldBerg",
+      "warrenty": "1"
+    },
+    {
+      "id": 2,
+      "productName": "J$L Mens casual linen Pant",
+      "categoryId": "2",
+      "description": "Latest men Linen pant",
+      "price": "2500",
+      "isAvailiable": "true",
+      "productImage": "https://i.postimg.cc/7L53Y9FD/hmgoepprod-6.jpg ",
+      "rating": "4.3",
+      "review": "150",
+      "vendorName": "H&M",
+      "warrenty": "1"
+    },
+    {
+      "id": 3,
+      "productName": "Mens casual solid half shirt",
+      "categoryId": "2",
+      "description": "light shade linen shirt",
+      "price": "1500",
+      "isAvailiable": "true",
+      "productImage": "https://i.postimg.cc/L5DYVgcN/hmgoepprod-4.jpg ",
+      "rating": "4.3",
+      "review": "150",
+      "vendorName": "H&M",
+      "warrenty": "1"
+    },
+    {
+      "id": 5,
+      "productName": "Women casual Frock",
+      "categoryId": "3",
+      "description": "light shade cotton Dress",
+      "price": "1500",
+      "isAvailiable": "true",
+      "productImage": "https://i.postimg.cc/ZKWD2PRk/hmgoepprod-2.jpg",
+      "rating": "4.3",
+      "review": "150",
+      "vendorName": "H&M",
+      "warrenty": "1"
+    },
+    {
+      "id": 8,
+      "productName": "J$L heel",
+      "categoryId": "1",
+      "description": "flower pattern heels",
+      "price": "1500",
+      "isAvailiable": "true",
+      "productImage": "https://i.postimg.cc/W47vzmgW/photo-2023-03-27-13-01-44.jpg",
+      "rating": "4.3",
+      "review": "150",
+      "vendorName": "H&M",
+      "warrenty": "1"
+    },
+    {
+      "id": "15",
+      "productName": "J$L Jacket",
+      "categoryId": "3",
+      "description": "Waterproof Holographic Jacket, Foldable Jacket, Kawaii Jacket, Windbreaker Shiny Jacket, Size Option Up To 7XL",
+      "price": "2300",
+      "isAvailiable": "yes",
+      "productImage": "https://i.postimg.cc/V6RGmqT2/il-1140x-N-4126780993-1gmg.jpg",
+      "rating": "4",
+      "review": "140",
+      "vendorName": "Jack GoldBerg",
+      "warrenty": "2"
+    },
+    {
+      "id": "4",
+      "productName": "women casual dress",
+      "categoryId": "3",
+      "description": "light shade cotton dress",
+      "price": "1000",
+      "isAvailiable": "true",
+      "productImage": "https://i.postimg.cc/pXPLBTXn/hmgoepprod-1.jpg",
+      "rating": "4",
+      "review": "140",
+      "vendorName": "Jack GoldBerg",
+      "warrenty": "1"
+    }
+  ],
+  "user": [
+    {
+      "name": "joel jonahs joy",
+      "email": "joeljonahsz@gmail.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "murali",
+      "email": "murali@gmail.com",
+      "password": "abc@123",
+      "id": 2
+    }
+  ],
+  "cart": [
+    {
+      "productName": "J$L casual linen shirt",
+      "categoryId": "2",
+      "description": "Latest men brown Linen shirt",
+      "price": "2500",
+      "isAvailiable": "true",
+      "productImage": "https://i.postimg.cc/V61rLYQc/hmgoepprod-7.jpg",
+      "rating": "4.3",
+      "review": "150",
+      "vendorName": "Jack GoldBerg",
+      "warrenty": "1",
+      "quantity": 1,
+      "productId": 1,
+      "id": 1
+    }
+  ]
+}
