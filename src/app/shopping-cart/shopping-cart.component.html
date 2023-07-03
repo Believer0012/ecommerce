@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart UI</title>
+	<link rel="stylesheet" type="text/css" href="./shopping-cart.component.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+<body>
+   <div id="CartContainer" class="text-center p-5 w-50 container fs-5 mt-5">
+   	   <div class="Header">
+   	   	<h3 class="Heading">Shopping Cart</h3>
+   	   
+   	   </div>
+
+   	   <div *ngFor="let cart of cartData" class="Cart-Items">
+   	   	  
+   	   	  	<img class="image-box" src={{cart.productImage}}/>
+   	   	     
+   	   	  <div class="about">
+   	   	  	<h1 class="title">{{cart.productName}}</h1>
+			<br>
+   	   	  
+   	   	  </div>
+		  
+   	   	  <!-- <div class="counter">
+   	   	  	<div class="btn">+</div>
+   	   	  	<div class="count">2</div>
+   	   	  	<div class="btn">-</div>
+   	   	  </div> -->
+   	   	  <div class="prices">
+   	   	  	<div class="amount">{{cart.price}} Rs</div>
+   	   	  
+   	   	  	<div class="remove"><u (click)="removeToCart(cart.id)">Remove</u></div>
+
+   	   	  </div>
+   	   </div>
+       <hr>
+
+   	 
+   	 
+   	 <div class="checkout">
+   	 <div class="total">
+   	 	<div>
+            <ul >
+                <li class="subtitle"> <span>Amount:</span><span>{{priceSummary.price}}</span></li>
+                <li class="subtitle"> <span>Tax:</span><span>{{priceSummary.tax}}</span></li>
+                <li class="subtitle"> <span>Delivery:</span><span>{{priceSummary.delivery}}</span></li>
+                <li class="subtitle"><span>Discount:</span><span>{{priceSummary.discount}}</span></li>
+                <li> <span><h4>Total</h4></span> <span><h4>{{priceSummary.total}}</h4></span></li>
+              
+            </ul>
+   	 		
+   	 	</div>
+   	 	
+           
+   	 </div>
+   	 <button (click)="checkout()" class="button">Checkout</button></div>
+   </div>
+</body>
+</html>

@@ -33,6 +33,7 @@ export class ProductService {
     let localcart = localStorage.getItem('localcart')
     if(!localcart){
       localStorage.setItem('localcart',JSON.stringify([data]))
+      this.cartData.emit([data]);
 
     }
     else{
@@ -54,6 +55,29 @@ export class ProductService {
   }
   addToCart(cartData: any) {
     return this.http.post('http://localhost:3000/cart', cartData);
+  }
+
+  getCartList(userid:any){
+    return this.http.get<any[]>('http://localhost:3000/cart?userid='+userid, 
+    {observe:'response'}).subscribe((result)=>{
+    
+    if(result && result.body)
+    {
+      this.cartData.emit(result.body)
+    }
+    });
+
+  }
+  removeToCart(cartId:any)
+  {
+    return this.http.delete('http://localhost:3000/cart/'+cartId,); 
+
+  }
+  
+  currentCart(){
+    let userStore=localStorage.getItem('user')
+    let userData = userStore&&JSON.parse(userStore);
+    return this.http.get<any[]>('http://localhost:3000/cart?='+userData[0].id,);   
   }
 
 

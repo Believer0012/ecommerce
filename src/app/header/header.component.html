@@ -8,7 +8,7 @@
                 <li class="nav-item"><a class="nav-link active  px-lg-5" aria-current="page" href="">Home</a></li>
                 <li class="nav-item"><a class="nav-link px-lg-5" href="seller-auth">Seller</a></li>
                 <li class="nav-item"><a class="nav-link  px-lg-5" href="seller-user-login">Login/sign-up</a></li>
-                 <button class="btn btn-outline-dark" type="submit">
+                 <button routerLink="shopping-cart" class="btn btn-outline-dark" type="submit">
                     <i class="bi-cart-fill me-"></i>
                     Cart
                     <span class="badge bg-dark text-white ms-1 rounded-pill">{{cartItems}}</span>
@@ -20,7 +20,7 @@
                 <li class="nav-item"><a class="nav-link active px-4 px-lg-5">{{userName | titlecase}}</a></li>
                 <li class="nav-item"><a class="nav-link active px-4 px-lg-5" routerLink="" >My Orders</a></li>
                 <li class="nav-item"><a class="nav-link active px-4 px-lg-5" (click)="userLogout()" >Logout</a></li>
-                <button class="btn btn-outline-dark" type="submit">
+                <button routerLink="shopping-cart" class="btn btn-outline-dark" type="submit">
                     <i class="bi-cart-fill me-"></i>
                     Cart
                     <span class="badge bg-dark text-white ms-1 rounded-pill">{{cartItems}}</span>

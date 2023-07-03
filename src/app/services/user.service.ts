@@ -42,10 +42,10 @@ export class UserService {
      if(result && result.body && result.body.length===1){
        this.isLoginError.emit(false)
        localStorage.setItem('user',JSON.stringify(result.body))
-      console.log(result.body.user.id);
+      //console.log(result.body.user.id);
       
        
-      localStorage.setItem('id',(result.body['id']))
+      //localStorage.setItem('id',(result.body['id']))
        //console.log(result.body.id);
 
        this.router.navigate(['seller-home'])

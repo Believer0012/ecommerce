@@ -12,6 +12,7 @@ import { SellerDeleteProductComponent } from './seller-delete-product/seller-del
 import { SellerUserLoginComponent } from './seller-user-login/seller-user-login.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { UserViewProductComponent } from './user-view-product/user-view-product.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
   {
@@ -75,7 +76,14 @@ const routes: Routes = [
     component:UserViewProductComponent,
     canActivate: [AuthGuard]
   
-  }
+  },
+   {
+    path:'shopping-cart',
+    component:ShoppingCartComponent,
+    canActivate: [AuthGuard]
+
+    
+   }
 
 ];
 

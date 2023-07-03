@@ -11,7 +11,7 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./seller-user-login.component.css']
 })
 export class SellerUserLoginComponent {
-  uid:any
+  
   constructor(private user:UserService,private fb:FormBuilder,private router:Router,private ps:ProductService){}
   shownLogin:boolean=true
   authError:string=""
@@ -71,26 +71,27 @@ export class SellerUserLoginComponent {
  
   localCartToRemoteCart(){
     let data = localStorage.getItem('localcart');
-    let user = localStorage.getItem('user');
-    let User=  user &&  JSON.parse(user)    
-    
-    let userId= user &&  JSON.parse(user[0]).id;
-   // let name =user && JSON.parse(user).name
-    // this.currentAcno=JSON.parse(localStorage.getItem('currentAcno')||"")
+    let User = localStorage.getItem('user');
+    let user = User && JSON.parse(User) 
+
+    let userid=user[0].id
         
     if(data){
      let cartDataList:any[]= JSON.parse(data);
    
-     cartDataList.forEach((product:any, index)=>{
+     cartDataList.forEach((product:any,index)=>{
        let cartData:any={
          ...product,
          productId:product.id,
-         userId,
-         User
+         userid
+        
+         
         
          
          
        }
+       console.log(user);
+
       // console.log(User["id"]);
       // console.log(userid);
        
@@ -112,6 +113,9 @@ export class SellerUserLoginComponent {
        }
      })
     }
+    setTimeout(()=>{
+      this.ps.getCartList(userid)
+    },2000);
  
   
      

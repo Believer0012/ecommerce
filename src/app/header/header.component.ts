@@ -32,6 +32,7 @@ export class HeaderComponent {
           let userData = userStore&&JSON.parse(userStore);
           this.userName=userData.name
           this.menuType='user'
+          this.ps.getCartList(userData[0].id);
         }
       }
 
@@ -58,6 +59,7 @@ export class HeaderComponent {
         userLogout(){
           localStorage.removeItem('user');
           this.route.navigateByUrl("")
+          this.ps.cartData.emit([])
       }
       search(event:any){
         this.searchTerm=event.target.value
