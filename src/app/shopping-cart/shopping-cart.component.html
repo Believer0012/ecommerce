@@ -40,17 +40,34 @@
    	 
    	 <div class="checkout">
    	 <div class="total">
-   	 	<div>
-            <ul >
-                <li class="subtitle"> <span>Amount:</span><span>{{priceSummary.price}}</span></li>
-                <li class="subtitle"> <span>Tax:</span><span>{{priceSummary.tax}}</span></li>
-                <li class="subtitle"> <span>Delivery:</span><span>{{priceSummary.delivery}}</span></li>
-                <li class="subtitle"><span>Discount:</span><span>{{priceSummary.discount}}</span></li>
-                <li> <span><h4>Total</h4></span> <span><h4>{{priceSummary.total}}</h4></span></li>
-              
-            </ul>
-   	 		
-   	 	</div>
+		<div>
+			<table>
+				<tbody>
+				  <tr>
+					<td>amount:</td>
+					<td align="right">{{priceSummary.price}}</td>
+				  </tr>
+				  <tr>
+					<td>Tax:</td>
+					<td align="right">{{priceSummary.tax}}</td>
+				  </tr>
+				  <tr>
+					<td>Delivery:</td>
+					<td align="right">{{priceSummary.delivery}}</td>
+				  </tr>
+				  <tr>
+					<td>Discount:</td>
+					<td align="right">{{priceSummary.discount}}</td>
+				  </tr>
+				</tbody>
+				<tfoot>
+				  <tr>
+					<td>Total:</td>
+					<td align="right">{{priceSummary.total}}</td>
+				  </tr>
+				</tfoot>
+			  </table>
+		</div>
    	 	
            
    	 </div>

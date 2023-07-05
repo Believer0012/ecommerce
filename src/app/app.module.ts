@@ -20,6 +20,7 @@ import { UserHomeComponent } from './user-home/user-home.component';
 import { UserViewProductComponent } from './user-view-product/user-view-product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrderListComponent } from './my-order-list/my-order-list.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     UserViewProductComponent,
     ShoppingCartComponent,
     CheckoutComponent,
+    MyOrderListComponent,
   
   ],
   imports: [

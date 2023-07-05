@@ -13,6 +13,8 @@ import { SellerUserLoginComponent } from './seller-user-login/seller-user-login.
 import { UserHomeComponent } from './user-home/user-home.component';
 import { UserViewProductComponent } from './user-view-product/user-view-product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrderListComponent } from './my-order-list/my-order-list.component';
 
 const routes: Routes = [
   {
@@ -83,8 +85,17 @@ const routes: Routes = [
     canActivate: [AuthGuard]
 
     
+   },
+   {
+    path:'checkout',
+    component: CheckoutComponent,
+    canActivate:[AuthGuard]
+   },
+   {
+    path:'my-order-list',
+    component: MyOrderListComponent ,
+    canActivate:[AuthGuard]
    }
-
 ];
 
 @NgModule({

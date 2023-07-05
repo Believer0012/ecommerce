@@ -120,70 +120,15 @@
       "id": 2
     }
   ],
-  "cart": [
+  "cart": [],
+  "orders": [
     {
-      "productName": "J$L Jacket",
-      "categoryId": "3",
-      "description": "Waterproof Holographic Jacket, Foldable Jacket, Kawaii Jacket, Windbreaker Shiny Jacket, Size Option Up To 7XL",
-      "price": "2300",
-      "isAvailiable": "yes",
-      "productImage": "https://i.postimg.cc/V6RGmqT2/il-1140x-N-4126780993-1gmg.jpg",
-      "rating": "4",
-      "review": "140",
-      "vendorName": "Jack GoldBerg",
-      "warrenty": "2",
-      "quantity": 1,
-      "productId": "15",
+      "email": "joeljonahsz@gmail.com",
+      "address": "REJOYS, NEAR DESAPOSHINI COMMUNITY HALL KUTHIRAVATTOM P/O, KOZHIKODE",
+      "contact": "09539265335",
+      "totalPrice": 3100,
       "userid": 1,
-      "id": 3
-    },
-    {
-      "productName": "J$L Mens casual linen Pant",
-      "categoryId": "2",
-      "description": "Latest men Linen pant",
-      "price": "2500",
-      "isAvailiable": "true",
-      "productImage": "https://i.postimg.cc/7L53Y9FD/hmgoepprod-6.jpg ",
-      "rating": "4.3",
-      "review": "150",
-      "vendorName": "H&M",
-      "warrenty": "1",
-      "quantity": 1,
-      "productId": 2,
-      "userid": 1,
-      "id": 4
-    },
-    {
-      "productName": "J$L heel",
-      "categoryId": "1",
-      "description": "flower pattern heels",
-      "price": "1500",
-      "isAvailiable": "true",
-      "productImage": "https://i.postimg.cc/W47vzmgW/photo-2023-03-27-13-01-44.jpg",
-      "rating": "4.3",
-      "review": "150",
-      "vendorName": "H&M",
-      "warrenty": "1",
-      "quantity": 1,
-      "productId": 8,
-      "userid": 1,
-      "id": 5
-    },
-    {
-      "productName": "Women casual Frock",
-      "categoryId": "3",
-      "description": "light shade cotton Dress",
-      "price": "1500",
-      "isAvailiable": "true",
-      "productImage": "https://i.postimg.cc/ZKWD2PRk/hmgoepprod-2.jpg",
-      "rating": "4.3",
-      "review": "150",
-      "vendorName": "H&M",
-      "warrenty": "1",
-      "quantity": 1,
-      "productId": 5,
-      "userid": 1,
-      "id": 6
+      "id": 1
     }
   ]
 }
